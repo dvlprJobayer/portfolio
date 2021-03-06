@@ -1,0 +1,202 @@
+@import '../sass/config';
+@import '../sass/menu';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include background;
+    background-color: $primary_color;
+    color: set_text_color($primary_color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Headings
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: .2rem 1rem;
+        background: rgba(lighten($primary_color, 2), .5);
+    }
+}
+
+a {
+    color: set_text_color($primary_color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary_color;
+}
+
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 55px);
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: .4rem;
+
+            &:hover {
+                color: $secondary_color;
+                @include easeOut;
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
+// About Page
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        grid-area: bioimage;
+        border-radius: 50%;
+        border: 3px solid $secondary_color;
+        margin: auto;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job {
+        background: lighten($primary_color, 5);
+        padding: .5rem;
+        border-bottom: 5px solid $secondary_color;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+}
+
+
+// Work Page
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .7rem;
+
+    img {
+        width: 100%;
+        border: 3px solid #fff;
+        @include easeOut;
+
+        &:hover {
+            border-color: $secondary_color;
+            opacity: .5;
+        }
+    }
+}
+
+// Contact Page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px solid #fff;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: .25rem 1rem;
+            background-color: $secondary_color;
+            color: set_text_color($secondary_color);
+            
+            span {
+                color: set_text_color($secondary_color);
+            }
+        }
+    }
+}
+
+
+// Button Style
+.btn {
+    display: block;
+    text-align: center;
+    padding: .5rem 1rem;
+    margin-bottom: .3rem;
+    border: 0;
+    @include easeOut;
+
+    &:hover {
+        background-color: $secondary_color;
+        color: set_text_color($secondary_color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary_color, 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary_color, 50);
+    color: #333;
+}
+
+
+// Footer
+#mainFooter {
+    background: darken($primary_color, 10);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    height: 55px;
+}
+
+
+@import '../sass/mobile';
