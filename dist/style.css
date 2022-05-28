@@ -80,6 +80,7 @@
     height: 250px;
     width: 250px;
     background: url(img/jobayer.jpg);
+    object-fit: cover;
     border-radius: 50%;
     border: 3px solid #eece1a
 }
