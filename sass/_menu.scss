@@ -19,6 +19,7 @@
         transform: rotate(180deg);
 
         .btn-line {
+
             // Line 1 Rotate
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 5px);
@@ -87,7 +88,7 @@
         .portrait {
             height: 250px;
             width: 250px;
-            background: url(img/portrait.jpg);
+            background: url(img/jobayer.jpg);
             border-radius: 50%;
             border: 3px solid $secondary_color;
         }
@@ -98,7 +99,7 @@
         transform: translate3d(600px, 0, 0);
         @include easeOut;
 
-        &.current > a {
+        &.current>a {
             color: $secondary_color;
         }
 
