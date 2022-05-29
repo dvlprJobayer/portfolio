@@ -79,7 +79,7 @@
 .menu-branding .portrait {
     height: 250px;
     width: 250px;
-    background: url(img/portrait.jpg);
+    background: url(img/jobayer.jpg);
     border-radius: 50%;
     border: 3px solid #eece1a
 }
@@ -132,7 +132,6 @@
 body {
     background-color: #444;
     color: #fff;
-    height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5
@@ -140,19 +139,10 @@ body {
 
 body#bg-img {
     background: url(img/background.jpg);
+    background-color: #333;
+    background-blend-mode: overlay;
     background-attachment: fixed;
     background-size: cover
-}
-
-body#bg-img::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(68, 68, 68, 0.8);
-    z-index: -1
 }
 
 h1,
@@ -288,17 +278,8 @@ main#home h1 {
     border: 3px solid #fff;
     padding: 1rem 2rem;
     margin-bottom: 3rem;
+    word-break: break-all;
     transition: all .5s ease-out
-}
-
-.boxes div:hover {
-    padding: .25rem 1rem;
-    background-color: #eece1a;
-    color: #000
-}
-
-.boxes div:hover span {
-    color: #000
 }
 
 .btn,
@@ -356,6 +337,8 @@ main#home h1 {
     }
 
     main .lg-heading {
+        font-size: 3rem;
+        margin-top: 4rem;
         margin-bottom: 1rem;
         line-height: 1
     }
@@ -383,7 +366,7 @@ main#home h1 {
     }
 
     .menu-branding .portrait {
-        background: url(img/portrait_small.jpg);
+        background: url(img/jobayer-small.jpg);
         width: 150px;
         height: 150px
     }
@@ -403,8 +386,18 @@ main#home h1 {
 }
 
 @media screen and (max-width: 500px) {
+    main {
+        padding: 1rem;
+    }
+
     main#home h1 {
-        margin-top: 10vh
+        margin-top: 15vh;
+        font-size: 3rem;
+    }
+
+    main#home h2 {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 
     .projects {
