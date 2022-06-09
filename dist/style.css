@@ -185,30 +185,57 @@ header {
     color: #eece1a
 }
 
-main {
+.main {
     padding: 4rem;
     min-height: calc(100vh - 55px)
 }
 
-main .icons {
+.main .icons {
     margin-top: 1rem
 }
 
-main .icons a {
+.main .icons a {
     padding: .4rem
 }
 
-main .icons a:hover {
+.main .icons a:hover {
     color: #eece1a;
     transition: all .5s ease-out
 }
 
-main#home {
+.main#home {
     overflow: hidden
 }
 
-main#home h1 {
-    margin-top: 20vh
+.main#home h1 {
+    margin-top: 20vh;
+}
+
+.resume-btn {
+    background-color: #eece1a;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-color: transparent;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    color: #000;
+}
+
+.details-btn {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.details-btn a {
+    background-color: #eece1a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-color: transparent;
+    font-weight: 600;
+    color: #000;
 }
 
 .about-info {
@@ -331,12 +358,12 @@ main#home h1 {
 }
 
 @media screen and (max-width: 768px) {
-    main {
+    .main {
         align-items: center;
         text-align: center
     }
 
-    main .lg-heading {
+    .main .lg-heading {
         font-size: 3rem;
         margin-top: 4rem;
         margin-bottom: 1rem;
@@ -386,16 +413,16 @@ main#home h1 {
 }
 
 @media screen and (max-width: 500px) {
-    main {
+    .main {
         padding: 1rem;
     }
 
-    main#home h1 {
+    .main#home h1 {
         margin-top: 15vh;
         font-size: 3rem;
     }
 
-    main#home h2 {
+    .main#home h2 {
         margin-top: 2rem;
         margin-bottom: 3rem;
     }
