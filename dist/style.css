@@ -280,7 +280,7 @@ header {
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: .7rem
+    grid-gap: 1rem
 }
 
 .projects img {
@@ -386,12 +386,43 @@ header {
 .project .img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    gap: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .project .img img {
     width: 100%;
+}
+
+.project .description {
+    font-size: 1.25rem;
+}
+
+.project .link {
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project .features {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+.project ul {
+    margin-top: 10px;
+}
+
+.project li {
+    font-size: 18px;
+    list-style: disc;
+    margin-bottom: 5px;
+}
+
+#project-2,
+#project-3 {
+    padding-top: 1rem;
 }
 
 @media screen and (min-width: 1171px) {
@@ -407,6 +438,19 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+
+    .project .img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project .link {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .main {
         align-items: center;
         text-align: center
@@ -464,6 +508,18 @@ header {
 @media screen and (max-width: 500px) {
     .main {
         padding: 1rem;
+    }
+
+    .details-btn {
+        margin-bottom: 1rem;
+    }
+
+    .project .img {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project .link {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .main#home h1 {
