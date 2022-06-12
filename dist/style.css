@@ -99,7 +99,7 @@
 
 .menu .nav-link {
     font-size: 30px;
-    padding: 1rem 0;
+    padding: .4rem 0;
     display: inline-block;
     text-transform: uppercase;
     transition: all .5s ease-out
@@ -425,6 +425,24 @@ header {
     padding-top: 1rem;
 }
 
+.menu-btn {
+    display: none;
+}
+
+.desktop-menu {
+    display: flex;
+    justify-content: end;
+}
+
+.desktop-menu a {
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.desktop-menu a:hover {
+    color: #eece1a;
+}
+
 @media screen and (min-width: 1171px) {
     .projects {
         grid-template-columns: repeat(4, 1fr)
@@ -438,6 +456,14 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
     .form {
         width: 100%;
     }
