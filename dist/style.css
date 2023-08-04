@@ -272,7 +272,7 @@ header {
 }
 
 .project .link {
-    width: 1080px;
+    width: 1050px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
